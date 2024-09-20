@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://expensefrontend-xq1k.onrender.com",
     credentials: true,
     methods: ["POST", "GET", "DELETE"],
   })
