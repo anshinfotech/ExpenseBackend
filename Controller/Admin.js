@@ -122,7 +122,9 @@ const loginAdmin = async (req, res) => {
 
     res.cookie("adminToken", token, {
       maxAge: 1000 * 60 * 60,
-      httpOnly : false,
+      httpOnly : true,
+      secure : "production",
+      sameSite : "Strict",
     });
 
     res.status(200).json({
