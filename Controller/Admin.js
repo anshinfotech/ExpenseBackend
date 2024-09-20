@@ -126,7 +126,7 @@ const loginAdmin = async (req, res) => {
       expires : expiresIn,
       httpOnly : false,
       secure: process.env.NODE_ENV === "production",
-      sameSite : "Strict",
+      sameSite : "None",
       path : '/'
     });
 
