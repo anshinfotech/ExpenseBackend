@@ -120,11 +120,13 @@ const loginAdmin = async (req, res) => {
 
     await isAdmin.save();
 
+    const expiresIn = new Date(Date.now() + 1000 * 60 * 60 * 24);
+
     res.cookie("adminToken", token, {
-      maxAge: 1000 * 60 * 60,
-      httpOnly : true,
+      expires : expiresIn,
+      httpOnly : false,
       secure: process.env.NODE_ENV === "production",
-      sameSite : "Lax",
+      sameSite : "Strict",
       path : '/'
     });
 
