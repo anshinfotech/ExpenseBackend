@@ -10,7 +10,8 @@ require("dotenv").config();
 const admin_key = process.env.AIT_SECRET_KEY;
 const COMPANY_MAIL = process.env.COMPANY_MAIL;
 const COMPANY_MAIL_PASS = process.env.COMPANY_MAIL_PASS;
-const SECRET_TOKEN = process.env.SECRET_TOKEN;
+// const SECRET_TOKEN = process.env.SECRET_TOKEN;
+const SECRET_TOKEN = "458fjfifm@#$85$%HJLJUDJI789654#$%%^%^&"
 
 const isCorrectEmail = (email) => {
   const regrex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]/;

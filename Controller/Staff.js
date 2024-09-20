@@ -2,7 +2,8 @@ const staffModel = require("../Modals/Staff");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require('dotenv').config();
-const SECRET_TOKEN = process.env.SECRET_TOKEN;
+// const SECRET_TOKEN = process.env.SECRET_TOKEN;
+const SECRET_TOKEN = "458fjfifm@#$85$%HJLJUDJI789654#$%%^%^&"
 
 const loginStaff = async (req, res) => {
   try {
