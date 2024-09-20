@@ -32,7 +32,7 @@ const generatePassword = () => {
 
 const transportor = nodemailer.createTransport({
   service: "gmail",
-  secure: false,
+  secure: true,
   auth: {
     user: COMPANY_MAIL,
     pass: COMPANY_MAIL_PASS,
@@ -122,6 +122,7 @@ const loginAdmin = async (req, res) => {
 
     res.cookie("adminToken", token, {
       maxAge: 1000 * 60 * 60,
+      httpOnly : false,
     });
 
     res.status(200).json({
